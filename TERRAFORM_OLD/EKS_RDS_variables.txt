@@ -1,0 +1,86 @@
+# Region-Availability Info
+variable "aws_region" {
+  default = "eu-north-1"
+}
+
+variable "availability_zone" {
+  default = "eu-north-1a"
+}
+
+# VPC_Subnet Info
+variable "vpc_cidr" {
+  default = "10.0.0.0/16"
+}
+
+variable "vpc_name" {
+  default = "MainVPC"
+}
+
+variable "public_subnet_cidr" {
+  default = "10.0.1.0/24"
+}
+
+variable "private_subnet_cidr" {
+  default = "10.0.2.0/24"
+}
+
+variable "public_subnet_name" {
+  default = "PublicSubnet"
+}
+
+variable "private_subnet_name" {
+  default = "PrivateSubnet"
+}
+
+# Security_Group
+variable "sg_name" {
+  default = "RDSSecurityGroup"
+}
+
+#RDS Engine and Version
+variable "db_engine" {
+  default = "mysql"
+}
+
+variable "db_engine_version" {
+  default = "8.0"
+}
+
+#RDS Credentials
+variable "db_username" {
+  description = "Master DB username"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_password" {
+  description = "Master DB password"
+  type        = string
+  sensitive   = true ##Prevents Terraform from displaying the password in CLI output
+}
+
+#DB_NAME
+variable "db_name" {
+  default = "ASLIdatabase"
+}
+
+#variable "lambda_function_name" {
+#  default = "HelloLambda"
+#}
+
+variable "vpc_id" {
+  description = "VPC ID for EKS worker nodes"
+  type        = string
+}
+
+variable "control_plane_sg_id" {
+  description = "Security group ID of EKS control plane"
+  type        = string
+}
+
+variable "ssh_key_name" {
+  description = "SSH key name for EKS worker nodes"
+  type        = string
+  default     = ""
+}
+

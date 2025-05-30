@@ -1,0 +1,21 @@
+output "rds_endpoint" {
+  description = "The endpoint address of the RDS instance"
+  value       = module.aws_rds.rds_endpoint
+}
+
+output "rds_database_name" {
+  description = "The database name for the RDS instance"
+  value       = module.aws_rds.db_name
+}
+
+# Remove or comment out Lambda outputs unless you have a lambda module with these outputs
+# output "lambda_function_name" {
+#   description = "The name of the deployed Lambda function"
+#   value       = module.lambda_module.lambda_function_name
+# }
+#
+# output "lambda_function_arn" {
+#   description = "The ARN (Amazon Resource Name) of the Lambda function"
+#   value       = module.lambda_module.lambda_function_arn
+# }
+
