@@ -1,6 +1,2 @@
-exports.handler = async (event) => {
-	  return {
-		      statusCode: 200,
-		      body: JSON.stringify("Hello, World!"),
-		    };
-};
+console.log("Hello from your Docker container!");
+
