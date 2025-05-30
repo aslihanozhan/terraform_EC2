@@ -3,7 +3,7 @@
 =======
 # Terraform EC2 Instance (AWS)
 
-This project provisions a simple EC2 instance in AWS using Terraform. It uses variables for configuration and outputs the instance's public IP.
+This project provisions a simple EC2 instance in AWS using Terraform. It uses variables for configuration and outputs the instance's public IP.ASLIHAN  
 
 ## Files
 
