@@ -45,7 +45,7 @@ jobs:
 
       - name: Build & Push to GCR
         run: |
-          GCP_IMAGE="gcr.io/YOUR_PROJECT_ID/myapp"
+          GCP_IMAGE="gcr.io/primeval-mark-378114/myapp"
           docker build -t $GCP_IMAGE:latest .
           docker push $GCP_IMAGE:latest
 
